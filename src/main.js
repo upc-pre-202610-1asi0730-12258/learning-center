@@ -13,7 +13,8 @@ import {
     ConfirmationService,
     ConfirmDialog, DataTable, Dialog,
     DialogService,
-    Drawer, FileUpload, FloatLabel, IconField, InputIcon, InputNumber, Menu, Rating, Row, Select, SelectButton, Tag,
+    Drawer, FileUpload, FloatLabel, IconField, InputIcon, InputNumber,
+    InputText, Menu, Rating, Row, Select, SelectButton, Tag,
     Textarea, Toast,
     ToastService, Toolbar, Tooltip
 } from "primevue";
@@ -42,6 +43,7 @@ createApp(App)
     .component('pv-icon-field', IconField)
     .component('pv-input-icon', InputIcon)
     .component('pv-input-number', InputNumber)
+    .component('pv-input-text', InputText)
     .component('pv-menu', Menu)
     .component('pv-rating', Rating)
     .component('pv-row', Row)
