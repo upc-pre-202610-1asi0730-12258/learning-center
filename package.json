@@ -1,7 +1,7 @@
 {
   "name": "learning-center",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "json-server": "^0.17.4"
   }
 }
