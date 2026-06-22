@@ -5,7 +5,7 @@ import {ref} from "vue";
 import {useI18n} from "vue-i18n";
 import FooterContent from "./footer-content.vue";
 // To import when IAM is implemented
-// import AuthenticationSection from "../../../iam/presentation/components/authentication-section.vue";
+import AuthenticationSection from "../../../iam/presentation/components/authentication-section.vue";
 const { t } = useI18n();
 
 const drawer = ref(false);
@@ -42,7 +42,7 @@ const items = [
           </pv-button>
         </div>
         <!-- To add when IAM is implemented -->
-        <!-- <authentication-section/> -->
+         <authentication-section/>
         <language-switcher/>
       </template>
     </pv-toolbar>
