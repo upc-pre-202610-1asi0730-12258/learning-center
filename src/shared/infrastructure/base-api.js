@@ -1,4 +1,6 @@
 import axios from "axios";
+// Import to enable IAM Interceptor for attaching authentication tokens to requests
+import {iamInterceptor} from "../../iam/infrastructure/iam.interceptor.js";
 
 const platformApi = import.meta.env.VITE_LEARNING_PLATFORM_API_URL;
 
@@ -12,7 +14,7 @@ export class BaseApi {
     #http;
 
     /**
-     * Initialises the Axios HTTP client with the platform base URL and default headers.
+     * Initializes the Axios HTTP client with the platform base URL and default headers.
      * The base URL is read from the `VITE_LEARNING_PLATFORM_API_URL` environment variable.
      */
     constructor() {
@@ -23,6 +25,8 @@ export class BaseApi {
                 'Access-Control-Allow-Origin': '*'
             }
         });
+        // Add interceptors for request/response if needed
+        this.#http.interceptors.request.use(iamInterceptor);
     }
 
     /**
