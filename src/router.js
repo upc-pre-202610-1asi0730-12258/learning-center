@@ -54,13 +54,13 @@ const router = createRouter({
  * @param {import('vue-router').NavigationGuardNext} next - Guard continuation callback.
  * @returns {void}
  */
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, from) => {
     console.log(`Navigating from ${from.name} to ${to.name}`);
     // Set the page title
     let baseTitle = 'ACME Learning Center';
     document.title = `${baseTitle} - ${to.meta['title']}`;
     // When IAM is implemented, use:
-    return authenticationGuard(to, from, next);
+    return authenticationGuard(to, from);
     // if not, use:
     // return next();
 });
